@@ -33,13 +33,17 @@ function App() {
   document.body.removeChild(textField);
 };
   const blockLink = 'https://mempool.space/block/';
-  const blockRef = `${blockLink}${(minedBlocks.height)}`
+  const blockRef = `${blockLink}${(minedBlocks.height)}`;
+  const shortBlockHeight = blockRef.slice(-6);
+  
+
+
   return (
     <div className="container">
       <div className="content">
         <h1 className="title">Block: {minedBlocks.height}</h1>
         <h2 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h2>
-        <button className="button" onClick={() => copyToClipboard(`${minedBlocks.height}`)}>
+        <button className="button" onClick={() => copyToClipboard(`${blockLink}${shortBlockHeight}`)}>
           GET STAMP
         </button>
       </div>
