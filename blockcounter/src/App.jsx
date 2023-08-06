@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../src/App.css';
+import BlockCounter from './components/BlockCounter';
 
 function App() {
   const [minedBlocks, setMinedBlocks] = useState({});
@@ -25,27 +26,33 @@ function App() {
     return date.toLocaleDateString();
   };
   const copyToClipboard = (text) => {
-  const textField = document.createElement('textarea');
-  textField.innerText = text;
-  document.body.appendChild(textField);
-  textField.select();
-  document.execCommand('copy');
-  document.body.removeChild(textField);
-};
+    const textField = document.createElement('textarea');
+    textField.innerText = text;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    document.body.removeChild(textField);
+  };
   const blockLink = 'https://mempool.space/block/';
   const blockRef = `${blockLink}${(minedBlocks.height)}`;
   const shortBlockHeight = blockRef.slice(-6);
-  
 
+  console.log(typeof (shortBlockHeight))
 
   return (
     <div className="container">
+      <h1>Bitcoin Blocks Counter</h1>
       <div className="content">
-        <h1 className="title">Block: {minedBlocks.height}</h1>
-        <h2 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h2>
-        <button className="button" onClick={() => copyToClipboard(`${blockLink}${shortBlockHeight}`)}>
-          GET STAMP
-        </button>
+        <div className='blockNumber-container'>
+          <h2 className="title">Block number:</h2>
+          <div id='blockCounter-container'>
+            <BlockCounter number={minedBlocks.height} />
+          </div>
+          <h3 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h3>
+          <button className="button" onClick={() => copyToClipboard(`${blockLink}${shortBlockHeight}`)}>
+            GET STAMP
+          </button>
+        </div>
       </div>
     </div>
   );
