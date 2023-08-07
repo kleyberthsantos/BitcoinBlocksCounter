@@ -23,8 +23,11 @@ function App() {
   };
   const formatDate = (timestamp) => {
     const date = new Date(timestamp * 1000);
-    return date.toLocaleDateString();
+    return date.toLocaleString();
   };
+
+  const stapDate = formatDate(minedBlocks.timestamp);
+
   const copyToClipboard = (text) => {
     const textField = document.createElement('textarea');
     textField.innerText = text;
@@ -49,7 +52,7 @@ function App() {
             <BlockCounter number={minedBlocks.height} />
           </div>
           <h3 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h3>
-          <button className="button" onClick={() => copyToClipboard(`${blockLink}${shortBlockHeight}`)}>
+          <button className="button" onClick={() => copyToClipboard(`${minedBlocks.height}   (${stapDate})`)}>
             GET STAMP
           </button>
         </div>
