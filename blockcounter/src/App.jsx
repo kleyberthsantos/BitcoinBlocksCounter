@@ -47,11 +47,11 @@ function App() {
       <h1>Bitcoin Blocks Counter</h1>
       <div className="content">
         <div className='blockNumber-container'>
-          <h2 className="title">Block number:</h2>
-          <div id='blockCounter-container'>
+          <div className='blockCounter-container' id='blockCounter-container'>
+            <h2 className="title">Block number:</h2>
             <BlockCounter number={minedBlocks.height} />
+            <h3 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h3>
           </div>
-          <h3 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h3>
           <button className="button" onClick={() => copyToClipboard(`${minedBlocks.height}   (${stapDate})`)}>
             GET STAMP
           </button>
