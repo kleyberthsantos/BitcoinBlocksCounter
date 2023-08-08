@@ -45,23 +45,25 @@ const Home = () => {
     console.log(typeof (shortBlockHeight))
 
     return (
-        <div className="container">
+        <main className='app'>
             <Navbar />
-            <h1>Bitcoin Block Counter</h1>
-            <section className="content">
-                <div className='blockNumber-container'>
-                    <main className='blockCounter-container' id='blockCounter-container'>
-                        <h2 className="title">Block number:</h2>
-                        <BlockCounter number={minedBlocks.height} />
-                        <h3 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h3>
-                    </main>
-                    <button className="button" onClick={() => copyToClipboard(`${minedBlocks.height}   (${stapDate})`)}>
-                        GET STAMP
-                    </button>
-                </div>
-            </section>
+            <div className="container">
+                <h1>Bitcoin Block Counter</h1>
+                <section className="content">
+                    <div className='blockNumber-container'>
+                        <main className='blockCounter-container' id='blockCounter-container'>
+                            <h2 className="title">Block number:</h2>
+                            <BlockCounter number={minedBlocks.height} />
+                            <h3 className="subtitle">Date: {formatDate(minedBlocks.timestamp)}</h3>
+                        </main>
+                        <button className="button" onClick={() => copyToClipboard(`${minedBlocks.height}   (${stapDate})`)}>
+                            GET STAMP
+                        </button>
+                    </div>
+                </section>
+            </div>
             <Footer />
-        </div>
+        </main>
     );
 }
 

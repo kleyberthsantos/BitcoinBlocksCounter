@@ -6,6 +6,15 @@
   box-sizing: border-box;
   font-family: 'Inconsolata', monospace;
 }
+.app, .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(315deg, rgba(2, 0, 36, 1) 0%, rgba(22, 22, 65, 1) 35%);
+  min-height: 100vh;
+  padding:  40px 10%;
+}
 
 .navbar__container {
   width: 100%;
@@ -42,12 +51,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:  40px 10%;
   gap: 40px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(315deg, rgba(2, 0, 36, 1) 0%, rgba(22, 22, 65, 1) 35%);
+  padding: 5%;
 }
-
 h1 {
   text-align: center;
   font-size: 60px;
@@ -220,7 +226,9 @@ h1 {
 .footer p a {
   color: #adadad;
 }
-
+.about {
+  padding:  40px 10%;
+}
 .about h1 {
   font-size: 40px;
 }
