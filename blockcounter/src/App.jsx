@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../src/App.css';
 import BlockCounter from './components/BlockCounter';
 
 function App() {

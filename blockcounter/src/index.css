@@ -21,6 +21,7 @@
 }
 
 h1 {
+  text-align: center;
   font-size: 60px;
   background: -webkit-linear-gradient(90deg, rgba(244,96,54,1) 0%, rgba(239,123,56,1) 35%, rgba(234,149,57,1) 62%, rgba(238,240,242,1) 99%);
   background-clip: text;
@@ -63,7 +64,6 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-size: 50px;
   gap: 10px;
   padding: 4px;
   border-radius: 6px;
@@ -74,11 +74,9 @@ h1 {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  
-  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.884);
+  box-shadow: inset 5px 5px 5px rgba(60, 59, 59, 0.722);
   border-radius: 3px;
   padding: 13px;
-  font-size: 50px;
 }
 
 .digit {
@@ -87,7 +85,8 @@ h1 {
   font-family: 'VT323', monospace;
 }
 
-.title {
+.title, .subtitle {
+  padding-left: 5px;
   font-size: 18px;
   margin:  20px 0 10px 0;
   text-align: left;
@@ -96,11 +95,7 @@ h1 {
 }
 
 .subtitle {
-  font-size: 18px;
   margin:  10px 0 20px 0;
-  text-align: left;
-  align-self: flex-start;
-  color: rgba(234,149,57,1);
 }
 
 .button {
@@ -128,14 +123,67 @@ h1 {
   outline: none;
 }
 
-.loading {
-  font-size: 30px;
-  color: #ffffff;
-  font-family: 'VT323', monospace;
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  padding: 4px;
+  border-radius: 6px;
+}
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c9c9c9;
+  box-shadow: inset 5px 5px 5px rgba(60, 59, 59, 0.722);
+  border-radius: 3px;
+  padding: 13px;
+  animation: pulse 1.5s infinite linear;
+}
+.square__1 {
+  animation-delay: 0.1s;
+}
+.square__2 {
+  animation-delay: 0.2s;
+}
+.square__3 {
+  animation-delay: 0.3s;
+}
+.square__4 {
+  animation-delay: 0.4s;
+}
+.square__5 {
+  animation-delay: 0.5s;
+}
+.square__6 {
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.square__p {
+  font-size: 100px;
+  color: transparent;
 }
 
 @media screen and (max-width: 600px) {
-  .digit {
+  .digit, .square__p {
     font-size: 60px;
   }
 }
@@ -144,14 +192,17 @@ h1 {
   .content {
     width: 100%;
   }
-  .digit {
-    font-size: 30px;
+  .digit, .square__p {
+    font-size: 25px;
   }
 
   h1 {
     font-size: 40px;
   }
   
+  .title, .subtitle {
+    font-size: 14px;
+  }
   .button {
     padding: 10px 20px;
     font-size: 16px;
