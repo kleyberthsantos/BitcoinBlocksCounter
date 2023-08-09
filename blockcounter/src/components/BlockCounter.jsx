@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loader from './Loader';
 
 const BlockCounter = ({ number }) => {
   const [digits, setDigits] = useState([]);
@@ -17,22 +18,22 @@ const BlockCounter = ({ number }) => {
   }, [number]);
 
   return (
-    loading ?
-      <div className='block-counter'>
-        <h3 className='loading'>Loading...</h3>
-      </div>
-      :
-      <di className='block-counter'>
 
-        {digits.map((digit, index) => (
+    <div className='block-counter'>
+      {
+        loading ?
+          <Loader />
+          :
+          digits.map((digit, index) => (
 
-          <div key={index} className='digit-container'>
-            <p className='digit'>
-              {digit}
-            </p>
-          </div>
-        ))}
-      </di>
+            <div key={index} className='digit-container'>
+              <p className='digit'>
+                {digit}
+              </p>
+            </div>
+          ))
+      }
+    </div>
   );
 };
 
