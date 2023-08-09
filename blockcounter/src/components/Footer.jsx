@@ -7,5 +7,5 @@ const Footer = () => {
     </footer>
   )
 }
-
+// colocar rrss para el proximo deploy
 export default Footer
