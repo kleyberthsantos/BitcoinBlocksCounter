@@ -7,21 +7,22 @@ const About = () => {
     return (
         <main className='container about'>
             <Navbar />
-            <h1>About Bitcoin Block Container</h1>
+            <h1>The Decentralized Clock</h1>
+            <h4>Ensuring Authenticity and Timing Accuracy with the Blockchain Number Stamp</h4>
             <article>
             <p>
-                Block number stamping on important messages is an increasingly relevant practice in the age of blockchain technology. This white paper explores in detail how this technique can be used to ensure the authenticity, integrity and traceability of messages, communications and online content. As blockchain technology continues to gain adoption, understanding and applying block number stamping becomes essential to establish the authenticity and accurate timing of events in the digital world.
+                In the age of blockchain technology, authenticity and time are critical. The practice of sealing block numbers in essential messages, a technique that has arrived to revolutionize how we understand authenticity and the exact timing of digital events.
             </p>
             <p>
-                Block number stamping provides irrefutable proof that a message or content existed at a particular point in time. This technique could be used to authenticate official communications, product announcements, contractual agreements, etc. The public can independently verify the authenticity and timing of the stamping by tracing the block number in a block explorer.
+                A Time Stamp of Authenticity.
+                Imagine having the ability to prove that a message existed at a precise moment in time. Block number sealing gives you this authentication tool. Whether validating official communications, advertising products or securing contractual agreements, this seal offers irrefutable proof. And best of all: the public can independently verify this seal by tracking the block number in a block explorer.
             </p>
-
             <p>
-                The use of block number stamping in social networks: companies, public figures and users can use it to verify the authenticity and timing of important posts on platforms such as Twitter.
+                Empowering Social Networks.
+                It doesn't stop there. Social networks, the digital heart of our society, can also benefit from this technique. Companies, celebrities and users can use the block number stamp to validate the authenticity and timing of crucial posts on platforms such as Twitter. In a world where information can be manipulated, this stamp adds an essential touch of trust.
             </p>
-
             <p>
-                Finally, block number stamping emerges as an essential tool in the fight against disinformation and online manipulation by providing a reliable way to establish the authenticity and timing of important messages. By understanding and adopting this technique, both individuals and organizations can strengthen trust in their content and communications in an ever-evolving digital world.
+                The fight against disinformation takes an exciting turn with block number sealing. How? By offering a reliable way to establish the authenticity and timing of crucial messages, this technique becomes a vital weapon against false narratives online. Whether an individual or an organization, block number sealing strengthens trust in an ever-evolving digital world.
             </p>
             <hr />
             <p>
